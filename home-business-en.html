@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>myfatoorah</title>
+    <link rel="icon" href="images/fav.png" type="image/png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap-rtl.min.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <section class="single-page">
+      <div class="container">
+        <div class="page-cont">
+          <div class="page-container">
+            <div class="lang-cont">
+              <div class="flex-div"></div>
+              <a href="index-en.html" class="logo-ancor">
+                <figure class="logo-img">
+                  <img src="images/logo.png" alt="logo" class="img-fluid" />
+                </figure>
+              </a>
+              <div class="flex-div">
+                <a href="index.html" class="lang-ancor">
+                  <span>ع</span>
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="wizard card-like">
+              <form>
+                <div class="wizard-header">
+                  <div class="steps">
+                    <div class="steps-progress">
+                      <ul class="progressbar list-unstyled wizard-step">
+                        <li class="" id="activeStep-1">
+                          <span class="stepnumber">1</span>
+                        </li>
+                        <li id="activeStep-2">
+                          <span class="stepnumber">2</span>
+                        </li>
+                        <li id="activeStep-3">
+                          <span class="stepnumber">3</span>
+                        </li>
+                        <li id="activeStep-4">
+                          <span class="stepnumber">4</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-body">
+                  <div class="step initial active" id="step_1">
+                    <h2 class="page-title">Project information</h2>
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label required"
+                          >Project name in English</label
+                        >
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"
+                          >Project name in Arabic</label
+                        >
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"> Project phone</label>
+                        <div class="form-input-relative">
+                          <input
+                            type="tel"
+                            class="tel-input form-input"
+                            placeholder="5xxxxxxxx"
+                          />
+                          <span class="tel-lang">
+                            996+
+                            <img src="images/lang.png" alt="" />
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          Project email
+                        </label>
+                        <input type="email" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">Category</label>
+                        <div class="form-input-relative">
+                          <i class="las la-angle-down angle-select"></i>
+                          <select class="select_input" name="">
+                            <option disabled selected hidden>
+                              Choose from the list
+                            </option>
+                            <option value="">camping products</option>
+                            <option value="">camping products</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 2)"
+                      >
+                        next
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_2">
+                    <h2 class="page-title">Bank account details</h2>
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label"> name of the bank account</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">Bank name</label>
+                        <div class="form-input-relative">
+                          <i class="las la-angle-down angle-select"></i>
+                          <select class="select_input" name="">
+                            <option disabled selected hidden>
+                              Choose from the list
+                            </option>
+                            <option value="two">Bank name</option>
+                            <option value="three">Bank name</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> account number</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> IBAN number</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                    </div>
+                    <p class="bank-text">
+                      Please make sure to fill in your bank details correctly to speed up the process
+                      Activate your account and avoid any delay in bank deposits to your account
+                      banking. Bank details are kept secure
+                      It is only used to transfer your bill payments to your bank account.
+                    </p>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 1)"
+                      >
+                        back
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 3)"
+                      >
+                        next
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_3">
+                    <h2 class="page-title">Project owner account registration information</h2>
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label required">
+                          full name</label
+                        >
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">
+                          email
+                        </label>
+                        <input type="email" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"> Project phone</label>
+                        <div class="form-input-relative">
+                          <input
+                            type="tel"
+                            class="tel-input form-input"
+                            placeholder="5xxxxxxxx"
+                          />
+                          <span class="tel-lang">
+                            996+
+                            <img src="images/lang.png" alt="" />
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"> password</label>
+                        <div class="form-input-relative">
+                          <label class="password-show">
+                            <input type="checkbox" onchange="showPass(this)" />
+                            <i class="las la-eye"></i>
+                          </label>
+                          <input type="password" class="form-input" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">
+                          confirm password
+                        </label>
+                        <div class="form-input-relative">
+                          <label class="password-show">
+                            <input type="checkbox" onchange="showPass(this)" />
+                            <i class="las la-eye"></i>
+                          </label>
+                          <input type="password" class="form-input" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">Nationality</label>
+                        <div class="form-input-relative">
+                          <i class="las la-angle-down angle-select"></i>
+                          <select class="select_input" name="">
+                            <option disabled selected hidden>
+                              Choose from the list
+                            </option>
+                            <option value="">egypt</option>
+                            <option value="">qatar</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 2)"
+                      >
+                        back
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 4)"
+                      >
+                        next
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_4">
+                    <p class="page-title">We're almost there</p>
+                    <div class="request-form otp-form">
+                      <div class="form-group required otp-input">
+                        <label> verification code</label>
+                        <div class="digit-group">
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                        </div>
+                      </div>
+                      <div class="countDown-cont">
+                        <span class="timer">
+                          <span id="counter">03:00</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="term-cont">
+                      <span>Your registration means that you agree to</span>
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#terms-modal"
+                      >
+                      terms of use
+                      </a>
+                    </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 3)"
+                      >
+                        back
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 5)"
+                      >
+                        next
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_5">
+                    <div class="success-cont">
+                      <h1 class="success-icon">
+                        <i class="las la-check-circle"></i>
+                      </h1>
+                      <h2 class="success-title">Your request has been submitted successfully</h2>
+                      <p class="success-pargh">
+                        The data will be reviewed to accept the request and activate the account as soon as possible
+                        Available time
+                      </p>
+                      <a href="index.html" class="first-btn" rel="nofollow">
+                        Login</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-footer">
+                  <!-- <div class="wizard-btn-cont">
+                    <button
+                      id="wizard-prev"
+                      style="display: none"
+                      type="button"
+                      class="btn btn-irv btn-irv-default second-btn"
+                    >
+                      back
+                    </button>
+                    <button
+                      id="wizard-next"
+                      type="button"
+                      class="btn btn-irv first-btn"
+                    >
+                      next
+                    </button>
+                    <button
+                      id="wizard-subm"
+                      style="display: none"
+                      type="button"
+                      class="btn btn-irv first-btn"
+                    >
+                      تسجيل
+                    </button>
+                  </div> -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start terms Modal -->
+    <div class="modal fade terms-modal" id="terms-modal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Terms and Conditions</h5>
+            <button type="button" class="close-modal" data-dismiss="modal">
+              <i class="las la-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="terms-pargh">
+              There are many types of Lorem Ipsum texts available, but the majority are
+              Somewhat modified by inserting some anecdotes or random words into
+              Text. If you want to use a Lorem Ipsum text, you have to check
+              Firstly that there are no embarrassing or inappropriate words or phrases hidden in it
+              this text. While all Lorem Ipsum text generators work online
+              to repeat passages from the same text of Lorem Ipsum as many times as it takes
+              need, this generator uses words from a dictionary that contains more than
+              200 latin words, plus a set of model sentences, to form a text
+              Lorem Ipsum has a logical form close to the real text. and next be
+              The output text is free from repetition, or any inappropriate words or phrases or whatsoever
+              Like. This is what makes it the first true Lorem Ipsum text generator on the internet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End terms Modal -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

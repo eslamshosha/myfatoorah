@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>myfatoorah</title>
+    <link rel="icon" href="images/fav.png" type="image/png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <section class="single-page">
+      <div class="container">
+        <div class="page-cont">
+          <div class="page-container">
+            <div class="lang-cont">
+              <div class="flex-div"></div>
+              <a href="index.html" class="logo-ancor">
+                <figure class="logo-img">
+                  <img src="images/logo.png" alt="logo" class="img-fluid" />
+                </figure>
+              </a>
+              <div class="flex-div">
+                <a href="home-business-en.html" class="lang-ancor">
+                  <span>eng</span>
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="wizard card-like">
+              <form>
+                <div class="wizard-header">
+                  <div class="steps">
+                    <div class="steps-progress">
+                      <ul class="progressbar list-unstyled wizard-step">
+                        <li class="" id="activeStep-1">
+                          <span class="stepnumber">1</span>
+                        </li>
+                        <li id="activeStep-2">
+                          <span class="stepnumber">2</span>
+                        </li>
+                        <li id="activeStep-3">
+                          <span class="stepnumber">3</span>
+                        </li>
+                        <li id="activeStep-4">
+                          <span class="stepnumber">4</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-body">
+                  <div class="step initial active" id="step_1">
+                    <h2 class="page-title">معلومات عن المشروع</h2>
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label required"
+                          >اسم المشروع بالإنجليزية</label
+                        >
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"
+                          >اسم المشروع بالعربية</label
+                        >
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"> هاتف المشروع</label>
+                        <div class="form-input-relative">
+                          <input
+                            type="tel"
+                            class="tel-input form-input"
+                            placeholder="5xxxxxxxx"
+                          />
+                          <span class="tel-lang">
+                            996+
+                            <img src="images/lang.png" alt="" />
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">
+                          البريد الإلكتروني للمشروع
+                        </label>
+                        <input type="email" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">التصنيف</label>
+                        <div class="form-input-relative">
+                          <i class="las la-angle-down angle-select"></i>
+                          <select class="select_input" name="">
+                            <option disabled selected hidden>
+                              اختر من القائمة
+                            </option>
+                            <option value="two">منتجات التخييم</option>
+                            <option value="three">منتجات التخييم</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 2)"
+                      >
+                        التالي
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_2">
+                    <h2 class="page-title">تفاصيل بيانات الحساب البنكي</h2>
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label"> اسم الحساب البنكي</label>
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">اسم البنك</label>
+                        <div class="form-input-relative">
+                          <i class="las la-angle-down angle-select"></i>
+                          <select class="select_input" name="">
+                            <option disabled selected hidden>
+                              اختر من القائمة
+                            </option>
+                            <option value="two">اسم البنك</option>
+                            <option value="three">اسم البنك</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> رقم الحساب</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label"> رقم الايبان</label>
+                        <input type="number" class="form-input" />
+                      </div>
+                    </div>
+                    <p class="bank-text">
+                      يرجى التأكد من ملء بياناتك البنكية بشكل صحيح لتسريع عملية
+                      تفعيل حسابك وتجنب أي تأخير في الايداعات البنكية الى حسابك
+                      البنكي. يتم الاحتفاظ بتفاصيل البيانات البنكية بشكل آمن
+                      وتستخدم فقط لتحويل مدفوعات فواتيرك إلى حسابك البنكي.
+                    </p>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 1)"
+                      >
+                        رجوع
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 3)"
+                      >
+                        التالي
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_3">
+                    <h2 class="page-title">معلومات تسجيل حساب صاحب المشروع</h2>
+                    <div class="group-input">
+                      <div class="form-group">
+                        <label class="form-label required">
+                          الإسم بالكامل</label
+                        >
+                        <input type="text" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">
+                          البريد الإلكتروني
+                        </label>
+                        <input type="email" class="form-input" />
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"> هاتف المشروع</label>
+                        <div class="form-input-relative">
+                          <input
+                            type="tel"
+                            class="tel-input form-input"
+                            placeholder="5xxxxxxxx"
+                          />
+                          <span class="tel-lang">
+                            996+
+                            <img src="images/lang.png" alt="" />
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required"> كلمة المرور </label>
+                        <div class="form-input-relative">
+                          <label class="password-show">
+                            <input type="checkbox" onchange="showPass(this)" />
+                            <i class="las la-eye"></i>
+                          </label>
+                          <input type="password" class="form-input" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">
+                          تأكيد كلمة المرور
+                        </label>
+                        <div class="form-input-relative">
+                          <label class="password-show">
+                            <input type="checkbox" onchange="showPass(this)" />
+                            <i class="las la-eye"></i>
+                          </label>
+                          <input type="password" class="form-input" />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label required">الجنسية</label>
+                        <div class="form-input-relative">
+                          <i class="las la-angle-down angle-select"></i>
+                          <select class="select_input" name="">
+                            <option disabled selected hidden>
+                              اختر من القائمة
+                            </option>
+                            <option value="">egypt</option>
+                            <option value="">qatar</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 2)"
+                      >
+                        رجوع
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 4)"
+                      >
+                        التالي
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_4">
+                    <p class="page-title">لقد اوشكنا على الانتهاء</p>
+                    <div class="request-form otp-form">
+                      <div class="form-group required otp-input">
+                        <label> كود التحقق</label>
+                        <div class="digit-group">
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                          <input
+                            type="text"
+                            name="opt-field[]"
+                            class="otp-field"
+                            maxlength="1"
+                          />
+                        </div>
+                      </div>
+                      <div class="countDown-cont">
+                        <span class="timer">
+                          <span id="counter">03:00</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="term-cont">
+                      <span>تسجيلك يعني موافقتك على</span>
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#terms-modal"
+                      >
+                        شروط الإستخدام
+                      </a>
+                    </div>
+                    <div class="wizard-btn-cont">
+                      <button
+                        type="button"
+                        class="btn btn-irv btn-irv-default second-btn"
+                        onclick="activeStep($(this), 3)"
+                      >
+                        رجوع
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-irv first-btn"
+                        onclick="activeStep($(this), 5)"
+                      >
+                        التالي
+                      </button>
+                    </div>
+                  </div>
+                  <div class="step" id="step_5">
+                    <div class="success-cont">
+                      <h1 class="success-icon">
+                        <i class="las la-check-circle"></i>
+                      </h1>
+                      <h2 class="success-title">تم إرسال طلبكم بنجاح</h2>
+                      <p class="success-pargh">
+                        سيتم مراجعة البيانات لقبول الطلب وتفعيل الحساب في أقرب
+                        وقت ممكن
+                      </p>
+                      <a href="index.html" class="first-btn" rel="nofollow">
+                        تسجيل دخول</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-footer">
+                  <!-- <div class="wizard-btn-cont">
+                    <button
+                      id="wizard-prev"
+                      style="display: none"
+                      type="button"
+                      class="btn btn-irv btn-irv-default second-btn"
+                    >
+                      رجوع
+                    </button>
+                    <button
+                      id="wizard-next"
+                      type="button"
+                      class="btn btn-irv first-btn"
+                    >
+                      التالي
+                    </button>
+                    <button
+                      id="wizard-subm"
+                      style="display: none"
+                      type="button"
+                      class="btn btn-irv first-btn"
+                    >
+                      تسجيل
+                    </button>
+                  </div> -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start terms Modal -->
+    <div class="modal fade terms-modal" id="terms-modal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">الشروط والأحكام</h5>
+            <button type="button" class="close-modal" data-dismiss="modal">
+              <i class="las la-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="terms-pargh">
+              هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية
+              تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى
+              النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق
+              أولاً أن ليس هناك أي كلمات أو عبارات محرجة أو غير لائقة مخبأة في
+              هذا النص. بينما تعمل جميع مولّدات نصوص لوريم إيبسوم على الإنترنت
+              على إعادة تكرار مقاطع من نص لوريم إيبسوم نفسه عدة مرات بما تتطلبه
+              الحاجة، يقوم مولّدنا هذا باستخدام كلمات من قاموس يحوي على أكثر من
+              200 كلمة لا تينية، مضاف إليها مجموعة من الجمل النموذجية، لتكوين نص
+              لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي. وبالتالي يكون
+              النص الناتح خالي من التكرار، أو أي كلمات أو عبارات غير لائقة أو ما
+              شابه. وهذا ما يجعله أول مولّد نص لوريم إيبسوم حقيقي على الإنترنت.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End terms Modal -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
