@@ -138,15 +138,15 @@ html[dir="ltr"] .progress-bar {
 }
 .lang-ancor {
   font-weight: 400;
-  font-size: 18px;
-  color: var(--main-color);
+  font-size: 16px;
+  color: #adadad;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
 .lang-ancor i {
-  font-size: 20px;
+  font-size: 16px;
   margin-inline-start: 5px;
 }
 .lang-ancor:hover {
@@ -192,7 +192,7 @@ html[dir="ltr"] .progress-bar {
 }
 .page-title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: var(--main-color);
   text-align: center;
 }
@@ -218,7 +218,7 @@ html[dir="ltr"] .progress-bar {
   margin: 10px 11.5px;
   position: relative;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   text-align: center;
   color: var(--main-color);
@@ -530,11 +530,12 @@ html[dir="ltr"] .progress-bar {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   background-color: #f1f1f1;
   border-radius: 50%;
-  font-size: 30px;
+  font-size: 18px;
+  font-weight: 500;
   color: #b5b7b9;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -752,7 +753,7 @@ label.required::after {
 .select2-container--default
   .select2-results__option--highlighted.select2-results__option--selectable {
   color: #ffffff;
-  background: var(--main-color);
+  background: #adadad;
   transition: 0.5s;
 }
 .select2-container--default
@@ -771,7 +772,10 @@ label.required::after {
   font-size: 14px;
   font-weight: 400;
 }
-
+.select2-container--default
+  .select2-results_option--highlighted.select2-results_option--selectable {
+  background: #adadad;
+}
 .select2-dropdown {
   background-color: #f1f1f1;
 }
