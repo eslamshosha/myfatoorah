@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>tasawk</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+        font-size: 14px;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 100px;
+      }
+
+      td {
+        border: 1px solid #bfbfbf;
+        padding: 9px 19px;
+        direction: ltr;
+        text-align: center;
+      }
+
+      th {
+        background-color: #2b76b7;
+        border: 1px solid #ffff;
+        color: #fff;
+        font-weight: 700;
+        padding: 15px 19px;
+        font-size: 16px;
+        direction: ltr;
+        text-align: center;
+      }
+
+      .content {
+        width: 1240px;
+        height: 1754px;
+        margin: auto;
+        padding: 29px 59px 53px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        width: 115px;
+        text-align: center;
+      }
+
+      .logo img {
+        width: 113px;
+        margin: 0 auto 5px;
+      }
+
+      .middle {
+        text-align: center;
+      }
+
+      .page-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0;
+      }
+
+      .qr {
+        width: 115px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .qr img {
+        width: 115px;
+        height: 115px;
+        border: 1px solid #bfbfbf;
+        padding: 3px;
+      }
+
+      .sec-th {
+        font-weight: 700;
+      }
+
+      .no_bakground th {
+        border: none;
+        background-color: transparent !important;
+        color: #000000;
+      }
+
+      .signatureـparant {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .signatureـparant .item {
+        text-align: center;
+      }
+
+      @media print {
+        .select-cont {
+          display: none;
+        }
+
+        body {
+          font-size: 2.5mm;
+        }
+
+        table {
+          margin-top: 6.8mm;
+        }
+
+        td {
+          border-width: 0.2mm;
+          padding: 1.5mm 3mm;
+        }
+
+        th {
+          padding: 1.5mm 3mm;
+        }
+
+        .content {
+          width: 210mm;
+          max-height: 297mm;
+          padding: 4.9mm 10mm 9mm;
+        }
+
+        .logo {
+          width: 20mm;
+        }
+
+        .logo img {
+          width: 19.3mm;
+        }
+
+        .page-title {
+          font-size: 3.05mm;
+          margin: 0 0 3.8mm;
+        }
+
+        .qr {
+          width: 20mm;
+        }
+
+        .qr img {
+          width: 19.6mm;
+          height: 19.6mm;
+          border: 0.2mm solid #bfbfbf;
+          padding: 0.6mm;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="content-body">
+        <!-- <div class="header">
+        <div class="logo">
+          <img src="images/logo.png" />
+        </div>
+        <div class="middle">
+          <h2 class="page-title">فاتورة ضريبية Tax Invoice</h2>
+        </div>
+        <div class="qr">
+          <img src="images/qr.png" />
+        </div>
+      </div> -->
+        <div class="tables-content">
+          <table>
+            <thead>
+              <tr>
+                <th>م</th>
+                <th colspan="3">الأصناف</th>
+                <th>الكمية</th>
+                <th>المرتجع</th>
+                <th>الصافي</th>
+                <th>السعر</th>
+                <th>الإجمالي</th>
+                <th colspan="2">ملاحظات</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td colspan="3">نوفا330 مل</td>
+              <td>50</td>
+              <td></td>
+              <td></td>
+              <td>15</td>
+              <td>340</td>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td colspan="3">نقي 200مل</td>
+              <td>21</td>
+              <td></td>
+              <td></td>
+              <td>15</td>
+              <td>340</td>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td colspan="3">نوفا330 مل</td>
+              <td>90</td>
+              <td></td>
+              <td></td>
+              <td>15</td>
+              <td>340</td>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td colspan="3">نوفا330 مل</td>
+              <td>90</td>
+              <td></td>
+              <td></td>
+              <td>20</td>
+              <td>340</td>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td colspan="3"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td colspan="2"></td>
+            </tr>
+            <tr class="no_bakground">
+              <th></th>
+              <th colspan="3">الأجمالي</th>
+              <th>200</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>2204</th>
+              <th colspan="2"></th>
+            </tr>
+            </tbody>
+          </table>
+          <div class="signatureـparant">
+            <div class="item">
+              <h2>توقيع المندوب</h2>
+              <p>....................................</p>
+            </div>
+            <div class="item">
+              <h2>توقيع امين المستودع</h2>
+              <p>....................................</p>
+            </div>
+            <div class="item">
+              <h2>توقيع المحاسب</h2>
+              <p>....................................</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
